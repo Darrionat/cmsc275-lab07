@@ -18,6 +18,8 @@ def load_data(file_name):
                 print(f'Column names are {", ".join(row)}')
                 line_count += 1
             else:
+                for i in range(len(row)):
+                    row[i] = float(row[i])
                 data.append(row)
                 line_count += 1
         print(f'Processed {line_count} lines.')
